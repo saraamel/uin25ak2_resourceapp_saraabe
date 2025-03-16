@@ -9,9 +9,10 @@ const Nav = () => {
         <li><Link to="/javascript">JavaScript</Link></li>
         <li><Link to="/react">React</Link></li>
         <li><Link to="/sanity">Sanity</Link></li>
+        {/* viser nav uten å laste siden */}
       </ul>
     </nav>
   );
 };
 
-export default Nav;
+export default Nav; //eksporter nav

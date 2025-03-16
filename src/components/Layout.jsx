@@ -1,17 +1,17 @@
-import { Outlet } from "react-router-dom";
-import Nav from "./Nav";
+import { Outlet } from "react-router-dom"; //importerer outlet
+import Nav from "./Nav"; //importerer nav
 
 const Layout = () => {
   return (
     <div>
-      <header>
-        <Nav />
+      <header> 
+        <Nav /> {/* nav meny */ }
       </header>
       <main>
-        <Outlet /> {/* Viser sidene basert på ruten */}
+        <Outlet /> {/* placeholder til sidene */}
       </main>
     </div>
   );
 };
 
-export default Layout;
+export default Layout; //eksporterer layout delen
