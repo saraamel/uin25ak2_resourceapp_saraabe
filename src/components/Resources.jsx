@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
-import PageTitle from "./PageTitle";
-import resources from "../Resources"; 
+import PageTitle from "./PageTitle"; //importerer Pagetitle
+import resources from "../data/Resources"; //importerer ressurser
+
+
 
 const Resources = ({ category }) => {
-  const [filteredResources, setFilteredResources] = useState([]);
+  const [filteredResources, setFilteredResources] = useState([]); //filtrerte ressurser
 
   useEffect(() => {
     setFilteredResources(resources.filter((r) => r.category === category));
-  }, [category]);
+  }, [category]); //kjører når kategori endres
 
   return (
-    <section>
-      <PageTitle title={category.toUpperCase()} />
-      <ul>
+    <section className="content-box">
+      <PageTitle title={category.toUpperCase()} /> {/* tittel på siden */}
+      <ul className="resource-list">
         {filteredResources.map((resource, index) => (
-          <li key={index}>
+          <li key={index} className="resource-item">
             <a href={resource.url} target="_blank" rel="noopener noreferrer">
               {resource.title}
             </a>
@@ -25,4 +27,4 @@ const Resources = ({ category }) => {
   );
 };
 
-export default Resources;
+export default Resources; //eksporterer resources

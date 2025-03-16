@@ -4,11 +4,11 @@ import Nav from "./Nav";
 const Layout = () => {
   return (
     <div>
-    <header>
-      <Nav />
-    </header>
+      <header>
+        <Nav />
+      </header>
       <main>
-        <Outlet /> {/* Dette gjør at innholdet endrer seg basert på ruten */}
+        <Outlet /> {/* Viser sidene basert på ruten */}
       </main>
     </div>
   );
